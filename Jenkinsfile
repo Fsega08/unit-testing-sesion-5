@@ -33,7 +33,7 @@ pipeline {
 
             steps {
 				withSonarQubeEnv('SONAR_LOCAL'){
-					sh  "${scanHOME}/bin/sonar-scanner -e -Dsonar.projectKey=backend -Dsonar.host.url=http://sonarqube:9000 -Dsonar.login=15c98633513271136de471bed3ab5c415e0975cd -Dsonar.java.binaries = target -Dsonar.coverage.exclusions=**/src/test/**,**/entity/**"
+					sh  "${scanHOME}/bin/sonar-scanner -e -Dsonar.projectKey=backend -Dsonar.host.url=http://sonarqube:9000 -Dsonar.login=15c98633513271136de471bed3ab5c415e0975cd -Dsonar.java.binaries=target -Dsonar.coverage.exclusions=**/src/test/**,**/entity/**"
 				}
             }
         }
